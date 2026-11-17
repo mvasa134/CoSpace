@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="uk">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CoSpace</title>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="app" id="app">
+    <header class="topbar" id="top"></header>
+    <div class="shell" id="shell">
+      <aside class="side" id="side">
+        <div class="side-head">
+          <span class="side-title">Навігатор коворкінгів</span>
+          <span style="display: flex; gap: 8px; align-items: center">
+            <button class="btn sm filters-toggle" id="ftoggle" data-act="toggle-filters">
+              Фільтри
+            </button>
+            <span class="count" id="count"></span>
+          </span>
+        </div>
+        <div class="filters" id="filters">
+          <label class="search" for="f-q"><svg class="ic" width="1.15em" height="1.15em" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="7" />
+              <path d="M20 20l-4-4" />
+            </svg><input id="f-q" type="text" placeholder="Назва, місто або адреса" autocomplete="off" /></label>
+          <div class="row2">
+            <select id="f-city" aria-label="Місто"></select>
+            <select id="f-type" aria-label="Тип місця">
+              <option value="">Будь-яке місце</option>
+              <option value="desk">Робоче місце</option>
+              <option value="room">Переговорна</option>
+            </select>
+          </div>
+          <div class="range">
+            <label for="f-price">Ціна до <b id="f-price-v"></b></label><input type="range" id="f-price" min="50"
+              max="120" step="5" value="120" />
+          </div>
+          <div class="chips" id="f-amen"></div>
+        </div>
+        <div class="list" id="list"></div>
+        <div class="halls" id="halls"></div>
+      </aside>
+      <main class="main" id="main"></main>
+    </div>
+    <footer class="statusbar" id="status"></footer>
+  </div>
+  <div id="drawer-root"></div>
+  <div id="modal-root"></div>
+  <div class="toasts" id="toasts" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+
+</html>
