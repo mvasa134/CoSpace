@@ -107,7 +107,6 @@ cd CoSpace
 
 # 1. налаштування
 cp .env.example .env              # Windows: copy .env.example .env
-# заповнити .env: дані БД, JWT_SECRET, TOTP_ENC_KEY, за потреби SMTP
 
 # 2. залежності
 python -m venv .venv
